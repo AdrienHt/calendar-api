@@ -1,0 +1,14 @@
+POST {{host}}/client
+Content-Type: application/json
+
+{
+  "name": "Six et Sept"
+}
+
+###
+GET {{host}}/client
+
+###
+GET {{host}}/client/4ffd5c75-2968-43ac-825c-9d09ebd4e7b9
+
+

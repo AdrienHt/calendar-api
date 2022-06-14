@@ -1,0 +1,23 @@
+POST {{host}}/staff-members
+Content-Type: application/json
+
+{
+  "first_name": "Adrien",
+  "last_name": "Herbert"
+}
+
+###
+GET {{host}}/staff-members
+
+###
+GET {{host}}/staff-members/4ffd5c75-2968-43ac-825c-9d09ebd4e7b9
+
+###
+PUT {{host}}/staff-members/fbd89ef5-cc44-4a17-aabc-63711e3bf813
+Content-Type: application/json
+
+{
+  "first_name": "Adrien",
+  "last_name": "Herbert"
+}
+

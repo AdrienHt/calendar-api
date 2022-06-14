@@ -1,0 +1,16 @@
+POST {{host}}/appointment
+Content-Type: application/json
+
+{
+  "staff_member_id": 1,
+  "client_id": 1,
+  "start_at": 1655157708,
+  "end_at": 1655157709,
+  "name": "1er rdv"
+}
+
+###
+GET {{host}}/appointment
+
+###
+GET {{host}}/appointment/338ed98e-93bc-469d-b709-18b51ddcf62a
