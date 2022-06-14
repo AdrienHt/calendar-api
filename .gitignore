@@ -19,6 +19,7 @@ lerna-debug.log*
 /.nyc_output
 
 # IDEs and editors
+.idea/*
 .idea/codeception.xml
 .idea/workspace.xml
 .idea/modules.xml
@@ -42,4 +43,4 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-sqlite
+sqlite/.*
