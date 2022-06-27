@@ -8,7 +8,7 @@ async function bootstrap() {
     const app = await NestFactory.create<NestFastifyApplication>(
         AppModule,
         new FastifyAdapter({
-            logger: true
+            logger: true,
         })
     );
     app.useGlobalPipes(
@@ -18,8 +18,9 @@ async function bootstrap() {
     );
     // @ts-ignore
     app.useGlobalInterceptors(ClassSerializerInterceptor)
+    app.enableCors();
     useContainer(app.select(AppModule), {fallbackOnErrors: true});
-    await app.listen(3000, '0.0.0.0');
+    await app.listen(8080, '0.0.0.0');
 }
 
 bootstrap();

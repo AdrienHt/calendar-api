@@ -27,8 +27,8 @@ export class ClientService extends BaseService<Client> {
         return await this.exists({where: {name: name}});
     }
 
-    public async update(uuid: string, updateStaffMemberDto: CreateOrUpdateClientDto) {
-        const staffMember = await this.findOneByUuid(uuid);
+    public async update(id: number, updateStaffMemberDto: CreateOrUpdateClientDto) {
+        const staffMember = await this.findOneById(id);
         staffMember.update(updateStaffMemberDto);
 
         await this.repository.manager.save(staffMember);
@@ -36,7 +36,7 @@ export class ClientService extends BaseService<Client> {
         return staffMember;
     }
 
-    public async findOneByUuid(uuid: string): Promise<Client> {
-        return this.findOne({where: {uuid: uuid}});
+    public async findOneById(id: number): Promise<Client> {
+        return this.findOne({where: {id: id}});
     }
 }

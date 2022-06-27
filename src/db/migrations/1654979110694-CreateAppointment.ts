@@ -14,12 +14,6 @@ export class CreateAppointments1654979110694 implements MigrationInterface {
                         generationStrategy: 'increment'
                     },
                     {
-                        name: 'uuid',
-                        type: 'string',
-                        isGenerated: true,
-                        generationStrategy: 'uuid'
-                    },
-                    {
                         name: 'created_at',
                         type: 'int',
                     },

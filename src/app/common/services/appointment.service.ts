@@ -17,9 +17,9 @@ export class AppointmentService extends BaseService<Appointment> {
     }
 
     protected getAppointmentOnRange(startAt: string, endAt: string) {
-        return this.repository.createQueryBuilder()
+        return this.repository.createQueryBuilder('appointment')
             .where(
-                '((start_at - :currentEndAt) * (end_at - :currentStartAt)) >= 0',
+                '((start_at - :currentEndAt) * (end_at - :currentStartAt)) <= 0',
                 {
                     'currentEndAt': endAt,
                     'currentStartAt': startAt
@@ -46,7 +46,7 @@ export class AppointmentService extends BaseService<Appointment> {
         return appointment;
     }
 
-    public async findOneByUuid(uuid: string): Promise<Appointment> {
-        return this.findOne({where: {uuid: uuid}});
+    public async findOneById(id: number): Promise<Appointment> {
+        return this.findOne({where: {id: id}});
     }
 }

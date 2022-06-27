@@ -7,7 +7,7 @@ export class Appointment extends BaseEntity {
         super();
         Object.assign(this, partial);
 
-        if (this.created_at) {
+        if (!this.created_at) {
             this.created_at = Date.now();
         }
     }

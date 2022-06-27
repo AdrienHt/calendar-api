@@ -2,7 +2,7 @@ import {Body, Controller, Get, Param, Post} from '@nestjs/common';
 import {AppointmentService} from '../../common/services/appointment.service';
 import {CreateAppointmentDto} from '../dto/appointment/create-appointment.dto';
 
-@Controller('appointment')
+@Controller('appointments')
 export class AppointmentController {
     constructor(private readonly appointmentService: AppointmentService) {
     }
@@ -17,8 +17,8 @@ export class AppointmentController {
         return this.appointmentService.findAll();
     }
 
-    @Get(':uuid')
-    findOne(@Param('uuid') uuid: string) {
-        return this.appointmentService.findOneByUuid(uuid);
+    @Get(':id')
+    findOne(@Param('id') id: number) {
+        return this.appointmentService.findOneById(id);
     }
 }

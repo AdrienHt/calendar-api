@@ -18,12 +18,12 @@ export class StaffMemberController {
     }
 
     @Get(':uuid')
-    findOne(@Param('uuid') uuid: string) {
-        return this.staffMembersService.findOneByUuid(uuid);
+    findOne(@Param('uuid') id: number) {
+        return this.staffMembersService.findOneById(id);
     }
 
-    @Put(':uuid')
-    update(@Param('uuid') uuid: string, @Body() updateStaffMemberDto: CreateOrUpdateStaffMemberDto) {
-        return this.staffMembersService.update(uuid, updateStaffMemberDto);
+    @Put(':id')
+    update(@Param('id') id: number, @Body() updateStaffMemberDto: CreateOrUpdateStaffMemberDto) {
+        return this.staffMembersService.update(id, updateStaffMemberDto);
     }
 }

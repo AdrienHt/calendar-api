@@ -1,16 +1,16 @@
-POST {{host}}/appointment
+POST {{host}}/appointments
 Content-Type: application/json
 
 {
   "staff_member_id": 1,
   "client_id": 1,
-  "start_at": 1655157708,
-  "end_at": 1655157709,
-  "name": "1er rdv"
+  "start_at": 1656339201,
+  "end_at": 1656339300,
+  "name": "1st appointment"
 }
 
 ###
-GET {{host}}/appointment
+GET {{host}}/appointments
 
 ###
-GET {{host}}/appointment/338ed98e-93bc-469d-b709-18b51ddcf62a
+GET {{host}}/appointments/338ed98e-93bc-469d-b709-18b51ddcf62a

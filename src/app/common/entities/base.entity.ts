@@ -4,10 +4,7 @@ import {randomUUID} from "crypto";
 
 export abstract class BaseEntity {
     @PrimaryGeneratedColumn()
-    @Exclude()
     id: number;
-    @Column()
-    uuid: string = randomUUID();
     @Column()
     created_at: number;
     @Column()

@@ -1,4 +1,4 @@
-POST {{host}}/client
+POST {{host}}/clients
 Content-Type: application/json
 
 {
@@ -6,9 +6,9 @@ Content-Type: application/json
 }
 
 ###
-GET {{host}}/client
+GET {{host}}/clients
 
 ###
-GET {{host}}/client/4ffd5c75-2968-43ac-825c-9d09ebd4e7b9
+GET {{host}}/clients/4ffd5c75-2968-43ac-825c-9d09ebd4e7b9
 
 

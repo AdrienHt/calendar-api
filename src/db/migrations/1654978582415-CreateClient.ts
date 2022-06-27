@@ -15,12 +15,6 @@ export class CreateClients1654978582415 implements MigrationInterface {
                         generationStrategy: 'increment'
                     },
                     {
-                        name: 'uuid',
-                        type: 'string',
-                        isGenerated: true,
-                        generationStrategy: 'uuid'
-                    },
-                    {
                         name: 'created_at',
                         type: 'int'
                     },

@@ -7,7 +7,7 @@ export class StaffMember extends BaseEntity {
         super();
         Object.assign(this, partial);
 
-        if (this.created_at) {
+        if (!this.created_at) {
             this.created_at = Date.now();
         }
     }
@@ -21,7 +21,4 @@ export class StaffMember extends BaseEntity {
 
     @Column()
     last_name: string;
-
-    // @OneToMany(type => Photo, photo => photo.user)
-    // appointments: Photo[];
 }

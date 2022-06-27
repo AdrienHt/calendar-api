@@ -15,10 +15,6 @@ export class CreateStaffMembers1654959317716 implements MigrationInterface {
                         generationStrategy: 'increment'
                     },
                     {
-                        name: 'uuid',
-                        type: 'string'
-                    },
-                    {
                         name: 'created_at',
                         type: 'int',
                     },

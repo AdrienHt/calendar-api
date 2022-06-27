@@ -31,13 +31,13 @@ export class IsAvailableConstraint implements ValidatorConstraintInterface {
         }
 
         if (args.property === 'staff_member_id') {
-            return !await this.appointmentService.isStaffMemberAvailable(args.value, args.object['start_at'], args.object['end_at']);
+            return await this.appointmentService.isStaffMemberAvailable(args.value, args.object['start_at'], args.object['end_at']);
         }
 
-        return !await this.appointmentService.isClientAvailable(args.value, args.object['start_at'], args.object['end_at']);
+        return await this.appointmentService.isClientAvailable(args.value, args.object['start_at'], args.object['end_at']);
     }
 
     defaultMessage(args: ValidationArguments) {
-        return `The ${args.property === 'staff_member_id' ? 'staff member' : 'client'} is not available on this dates`;
+        return `The ${args.property === 'staff_member_id' ? 'staff member' : 'client'} is not available for theses dates`;
     }
 }
